@@ -1,0 +1,298 @@
+/* style.css */
+body{
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* background gradient */
+.gradient-background {
+    /* 1. Define the gradient colors and angle */
+    background: linear-gradient(-45deg, #5ce494, #3f72af, #d8bd63, #569dfa);
+    
+    /* 2. Make the background much larger than the viewport */
+    background-size: 400% 400%;
+    
+    /* 3. Apply the animation */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* 4. Define the keyframes for the animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero-section{
+    min-height: 100vh;
+    height: 570px; 
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../images/People-shake-hands.png');
+    padding : 0 96px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+.hero-section h1{
+    font-size: 36px;
+    margin-bottom: 16px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p{
+    font-size: 16px;
+    max-width: 872px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.hero-section .btn{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+/* --- Products Section Styles --- */
+
+.products-section {
+    padding: 60px 24px;
+    text-align: center;
+    background-color: var(--secondary-background-color); /* A light background to stand out */
+}
+
+.products-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 0 auto 48px auto; /* Center the subtitle and add space below */
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Container for the cards (uses Flexbox) */
+.plan-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* Space between cards */
+    flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+}
+
+/* Individual Card Styling */
+.plan-card {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    padding: 32px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    flex-basis: 320px; /* Base width for each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px); /* Lifts the card on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.plan-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+.plan-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+
+.plan-selector {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f5f8fa;
+}
+
+.plan-selector h2 {
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plan-card {
+  display: inline-block;
+  padding: 20px 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* section 2 css */
+
+.how-it-works {
+    /* Sets the overall section style */
+    text-align: center;
+    padding: 60px 24px; /* Vertical and horizontal spacing */
+    background-color: var(--secondary-background-color, #fcfaf3); /* A light background to separate it */
+}
+
+.how-it-works h2 {
+    /* Styles the main heading */
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color, #221f1a);
+    margin-bottom: 48px; /* Space below the heading */
+}
+
+.steps {
+    /* This is the container for the step cards */
+    display: flex;
+    justify-content: space-around; /* Spreads the cards out evenly */
+    align-items: flex-start; /* Aligns cards to the top */
+    gap: 32px; /* Space between the cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole group */
+}
+
+.step {
+    /* This styles each individual card */
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* A soft shadow for depth */
+    flex-basis: 300px; /* Gives each card a base width */
+    flex-grow: 1; /* Allows cards to grow if there's space */
+    max-width: 350px;
+
+    /* We use flexbox here too to center the content inside the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.step span {
+    /* This styles the number icon */
+    font-size: 28px;
+    background-color: var(--primary-color, #569dfa);
+    color: white;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%; /* Makes it a perfect circle */
+
+    /* Centering the emoji inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step p {
+    /* Styles the text below the icon */
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color, #221f1a);
+    margin: 0; /* Removes default paragraph margin */
+}
+
+/*  */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards in the column */
+    }
+
+    .step {
+        width: 100%; /* Make cards take full width on mobile */
+        max-width: 400px;
+    }
+}
+
+
+/*  */
+
+.container-home h1{
+    font-size: 36px;
+    margin-bottom: 16px;
+    text-align: center;
+    color : var(--background-color)
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 56px;
+    gap: 32px;
+}
+
+.reasons{
+    display: flex;
+    gap: 128px;
+    justify-content: center;
+    color : var(--background-color);
+}
+
+.reason-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 200px;
+}
+
+.reason-card h3{
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

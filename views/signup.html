@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Tarumanagara Insurance</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/login.css">
+</head>
+<body class = "signup">
+    <div id="navbar"></div>
+    <script src="../src/js/navbar-loader.js"></script>
+    
+    <div class="bg-image"></div>
+    <div class="login-container">
+        <h2>Create an Account</h2>
+        <p>Please input your details to sign up.</p>
+
+        <form id="signup-form" class="login-form">
+            <div class="form-group">
+                <input type="text" id="full-name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="phone-number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            
+            <p id="error-message" style="color: red; text-align: center; display: none;"></p>
+            
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html" class='linkto'>Log In</a></p>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+
+    <script src="../src/js/navbar-loader.js"></script>
+    <script src="../src/js/signup.js"></script>
+</body>
+</html>           

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Company</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body class = 'gradient-background'>
+    <div id="navbar"></div>
+    <script src="../src/js/navbar-loader.js"></script>
+    
+    <div class = "bg-image"></div>
+    <div class = "hero-section">
+        <h1>Tarumanagara Insurance</h1>
+        <p>At Tarumanagara Insurance, we are committed to providing you with the best insurance solutions to protect what matters most to you. Our team of experienced professionals is here to help you navigate the complexities of insurance and find the right coverage for your needs.</p>
+        <div class = "hero-buttons">
+            <a href = "#learnmore" class = "btn">Learn More</a>
+            <a href = "/views/signup.html" class = "btn">Sign-up Now</a>
+        </div>
+    </div>
+    <div class="products-section">
+        <h2>Protection for Every Aspect of Your Life</h2>
+        <p class="section-subtitle">Find the perfect plan to secure your future. We offer comprehensive coverage tailored to your unique needs.</p>
+        
+        <div class="plan-cards-container">
+            <a href="health.html" class="plan-card">
+                <div class="card-icon">🏥</div>
+                <h3>Health Insurance</h3>
+                <p>Peace of mind for your health journey. Our plans cover everything from routine check-ups to emergencies.</p>
+            </a>
+            
+            <a href="life.html" class="plan-card">
+                <div class="card-icon">❤️</div>
+                <h3>Life Insurance</h3>
+                <p>Secure your family's future. Our life insurance provides a financial safety net for your loved ones.</p>
+            </a>
+            
+            <a href="car.html" class="plan-card">
+                <div class="card-icon">🚗</div>
+                <h3>Car Insurance</h3>
+                <p>Comprehensive protection for your vehicle against accidents and theft. Drive worry-free with our reliable coverage.</p>
+            </a>
+        </div>
+    </div>
+    
+    <div id = "learnmore" class = "container-home">
+        <h1>Why Choose Us?</h1>
+        <div class = "content">
+            <div class = "reasons">
+                <div class = "reason-card">
+                    <h3>10.000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class = "reason-card">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+                <div class = "reason-card">
+                    <h3>99%</h3>
+                    <p>Claim Approval Rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <span>1</span>
+                <p>Choose a Plan</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <p>Get Your Quote</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <p>Get Covered</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+</html>

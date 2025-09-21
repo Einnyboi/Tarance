@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tarumanagara Insurance</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/login.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <main class="main-content">
+        <div id="navbar"></div>
+        <script src="../src/js/navbar-loader.js"></script>
+
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <p>Please input your details to log in.</p>
+            
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <p id="error-message" style="color: red; text-align: center; display: none;"></p>
+
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html" class='linkto'>Sign Up</a></p>
+        </div>
+    </main> <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="../src/js/login.js"></script>
+</body>
+</html>

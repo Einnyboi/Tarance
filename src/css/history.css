@@ -1,0 +1,49 @@
+/* history.css */
+
+.history-container {
+    max-width: 1000px;
+    margin: 48px auto;
+    padding: 24px;
+}
+
+.history-container h1 {
+    margin-bottom: 8px;
+}
+
+.history-container p {
+    margin-bottom: 32px;
+    color: #555;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.history-table th, .history-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-table thead {
+    background-color: var(--secondary-background-color);
+}
+
+.history-table th {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-lunas {
+    background-color: #27ae60;
+}

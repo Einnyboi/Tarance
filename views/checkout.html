@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Tarumanagara Insurance</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/checkout.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script src="../src/js/navbar-loader.js"></script>
+
+    <div class="checkout-container">
+        <h1>Checkout Pembayaran</h1>
+        <div class="checkout-layout">
+            <div class="order-summary">
+                <h2>Ringkasan Pesanan</h2>
+                <div class="summary-item">
+                    <span>Produk Asuransi</span>
+                    <strong id="product-name">Memuat...</strong>
+                </div>
+                <hr>
+                <div class="summary-item total">
+                    <span>Total Pembayaran</span>
+                    <strong id="premium-display">Rp 0</strong>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h2>Pilih Metode Pembayaran</h2>
+                <div class="payment-option">
+                    <input type="radio" id="va" name="payment" value="va" checked>
+                    <label for="va">Virtual Account (BCA, Mandiri, BNI)</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="ewallet" name="payment" value="ewallet">
+                    <label for="ewallet">E-Wallet (GoPay, OVO, Dana)</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="cc" name="payment" value="cc">
+                    <label for="cc">Kartu Kredit/Debit (Visa, Mastercard)</label>
+                </div>
+            </div>
+        </div>
+        <button id="pay-button" class="btn">Bayar Sekarang</button>
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="../src/js/checkout.js" defer></script>
+</body>
+</html>

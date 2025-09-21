@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/history.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    
+    <div class="history-container">
+        <h1>Purchase History</h1>
+        <p>Here are your previous transactions</p>
+        
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Date Paid</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="history-table-body">
+                </tbody>
+        </table>
+        
+        <div id="no-history-message" style="display: none; text-align: center; padding: 40px;">
+            <p>You have yet to bought anything</p>
+            <a href="home.html" class="btn">Buy products now!</a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../src/js/navbar-loader.js"></script>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="../src/js/history.js" defer></script>
+</body>
+</html>

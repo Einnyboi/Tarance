@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance - Tarumanagara Insurance</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/form.css">
+</head>
+<body class="gradient-background">
+    <div id="navbar"></div>
+    <script src="../src/js/navbar-loader.js"></script>
+    <div class="form-container">
+        <h1>Buy Health Insurance</h1>
+        <p>Fill out the form to get an estimate for the monthly premium price</p>
+        
+        <form id="health-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" placeholder="Input your full government name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dateOfBirth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Work</label>
+                <input type="text" id="occupation" name="occupation" placeholder="e.g. Government Official" required>
+            </div>
+
+            <div class="form-group">
+                <label for="smoker">Do you smoke?</label>
+                <select id="smoker" name="smoker" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hypertension">Do you have a history of Hypertension?</label>
+                <select id="hypertension" name="hypertension" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="diabetes">Do you have a history of Diabetes?</label>
+                <select id="diabetes" name="diabetes" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn">Calculate Premium</button>
+        </form>
+
+        <div id="result" class="result-container" style="display: none;">
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="../src/js/count-health.js" defer></script>
+</body>
+</html>

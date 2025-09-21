@@ -1,0 +1,80 @@
+/*checkout.css*/
+
+.checkout-container {
+    max-width: 900px;
+    margin: 48px auto;
+    padding: 40px;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-container h1 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.checkout-layout {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.order-summary, .payment-methods {
+    flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Style untuk ringkasan pesanan */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.summary-item.total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary-item strong {
+    color: var(--primary-color);
+}
+
+/* Style untuk pilihan metode pembayaran */
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: var(--primary-color);
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+
+/* Style untuk tombol bayar */
+#pay-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}

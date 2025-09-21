@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance - Tarumanagara Insurance</title>
+    <link rel="stylesheet" href="../src/css/variables.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/form.css">
+</head>
+<body class="gradient-background">
+    <div id="navbar"></div>
+    <script src="../src/js/navbar-loader.js"></script>
+    
+    <div class="form-container">
+        <h1>Buy Car Insurance</h1>
+        <p>Fill out the form to get an estimate for the annual premium price</p>
+        
+        <form id="car-form">
+            <div class="form-group">
+                <label for="merk-mobil">Car Brand</label>
+                <input type="text" id="merk-mobil" name="merkMobil" placeholder="e.g Avanza" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jenis-mobil">Car Type</label>
+                <input type="text" id="jenis-mobil" name="jenisMobil" placeholder="e.g SUV" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tahun-mobil">Car Production Year</label>
+                <input type="number" id="tahun-mobil" name="tahunMobil" placeholder="e.g. 2022" min="1900" max="2025" required>
+            </div>
+
+            <div class="form-group">
+                <label for="harga-mobil">Car Price (Rupiah)</label>
+                <input type="number" id="harga-mobil" name="hargaMobil" placeholder="e.g. 200000000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="domisili">Vehicle Domicile (Plate)</label>
+                <select id="domisili" name="domisili" required>
+                    <option value="jakarta">Jakarta (Plate B)</option>
+                    <option value="surabaya">Surabaya (Plate L)</option>
+                    <option value="bandung">Bandung (Plate D)</option>
+                    <option value="lainnya">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nomor-mesin">Machine Number (Nomor Mesin)</label>
+                <input type="text" id="nomor-mesin" name="nomorMesin" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nomor-mobil">Frame Number (Nomor Rangka)</label>
+                <input type="text" id="nomor-mobil" name="nomorMobil" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob-pengemudi">Driver's Date of Birth</label>
+                <input type="date" id="dob-pengemudi" name="dobPengemudi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nama-pemilik">Driver's Full Government Name</label>
+                <input type="text" id="nama-pemilik" name="namaPemilik" required>
+            </div>
+
+            <div class="form-group">
+                <label for="foto-mobil">Car Photos (Front, Back, Sides, etc.)</label>
+                <input type="file" id="foto-mobil" name="fotoMobil" multiple required>
+            </div>
+            
+            <button type="submit" class="btn">Calculate Premium</button>
+        </form>
+
+        <div id="result" class="result-container" style="display: none;">
+            </div>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="../src/js/count-car.js" defer></script>
+</body>
+</html>
