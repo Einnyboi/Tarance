@@ -30,9 +30,17 @@ document.getElementById('life-form').addEventListener('submit', function(event) 
     const monthlyPremium = m * t;
 
     // 5. Save the final price to localStorage for the checkout page
-    // Using 'premiumToPay' to be consistent with your other calculator pages.
-    localStorage.setItem('premiumToPay', monthlyPremium);
-    localStorage.setItem('productName', 'Asuransi Jiwa');
+    const checkoutData = {
+        productName: 'Asuransi Jiwa',
+        monthlyPremium: monthlyPremium,
+        annualPremium: monthlyPremium * 12,
+        details: {
+            age: age,
+            sumInsured: t
+        }
+    };
+    localStorage.setItem('insuranceCheckoutDetails', JSON.stringify(checkoutData));
+
 
     // 6. Display the result on the page
     const resultDiv = document.getElementById('result');
