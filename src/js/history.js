@@ -1,4 +1,4 @@
-// File: src/js/history.js
+// history.js
 
 document.addEventListener('DOMContentLoaded', () => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const tableBody = document.getElementById('history-table-body');
     const noHistoryMessage = document.getElementById('no-history-message');
 
-    // Check if user is logged in
     if (!currentUser) {
         window.location.href = 'login.html'; // Redirect to login if not logged in
         return;

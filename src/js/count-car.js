@@ -1,3 +1,5 @@
+//count-car.js
+
 document.getElementById('car-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from reloading the page
 
@@ -32,8 +34,6 @@ document.getElementById('car-form').addEventListener('submit', function(event) {
         annualPremium = 0.05 * carPrice;
     }
 
-    // --- CHANGES START HERE ---
-
     // 3. Calculate the monthly premium
     const monthlyPremium = annualPremium / 12;
 
@@ -49,7 +49,6 @@ document.getElementById('car-form').addEventListener('submit', function(event) {
     // 5. Display the result and the Checkout button
     const resultDiv = document.getElementById('result');
     
-    // CHANGE: Format the MONTHLY premium for display, not the annual one
     const formattedPremium = monthlyPremium.toLocaleString('id-ID', {
         style: 'currency',
         currency: 'IDR',
@@ -63,6 +62,4 @@ document.getElementById('car-form').addEventListener('submit', function(event) {
         <a href="checkout.html" class="btn btn-primary" style="margin-top: 16px;">Go to Checkout</a>
     `;
     resultDiv.style.display = 'block';
-
-    // --- CHANGES END HERE ---
 });

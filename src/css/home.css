@@ -42,7 +42,6 @@
 }
 
 /* section overview css */
-
 .user-overview-section h2 {
     text-align: center;
     font-size: 28px;
@@ -101,13 +100,12 @@
 .quick-actions {
     display: flex;
     gap: 16px;
-    flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
+    flex-wrap: wrap;
     border-top: 1px solid #e0e0e0;
     padding-top: 24px;
     margin-top: 24px;
 }
 
-/* Reusable Button Styles */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -126,7 +124,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #417edb; /* A slightly darker shade of your primary color */
+    background-color: #417edb;
 }
 
 .btn-secondary {
@@ -150,7 +148,7 @@
     }
 
     .policy-icon {
-        margin: 0 auto; /* Center the icon when stacked */
+        margin: 0 auto;
     }
     
     .quick-actions {

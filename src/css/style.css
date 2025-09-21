@@ -5,19 +5,13 @@ body{
     color: var(--text-color);
 }
 
-/* background gradient */
+/* background gradient style*/
 .gradient-background {
-    /* 1. Define the gradient colors and angle */
     background: linear-gradient(-45deg, #5ce494, #3f72af, #d8bd63, #569dfa);
-    
-    /* 2. Make the background much larger than the viewport */
     background-size: 400% 400%;
-    
-    /* 3. Apply the animation */
     animation: gradientAnimation 15s ease infinite;
 }
 
-/* 4. Define the keyframes for the animation */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -46,7 +40,6 @@ body{
     align-items: center;
     text-align: center;
     color: white;
-
 }
 
 .hero-section h1{
@@ -79,13 +72,11 @@ body{
     transition: background-color 0.3s ease;
 }
 
-
 /* --- Products Section Styles --- */
-
 .products-section {
     padding: 60px 24px;
     text-align: center;
-    background-color: var(--secondary-background-color); /* A light background to stand out */
+    background-color: var(--secondary-background-color);
 }
 
 .products-section h2 {
@@ -95,18 +86,18 @@ body{
 
 .section-subtitle {
     max-width: 600px;
-    margin: 0 auto 48px auto; /* Center the subtitle and add space below */
+    margin: 0 auto 48px auto;
     font-size: 18px;
     color: #555;
     line-height: 1.6;
 }
 
-/* Container for the cards (uses Flexbox) */
+/* plan cards style */
 .plan-cards-container {
     display: flex;
     justify-content: center;
-    gap: 32px; /* Space between cards */
-    flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+    gap: 32px;
+    flex-wrap: wrap; 
 }
 
 /* Individual Card Styling */
@@ -119,12 +110,12 @@ body{
     text-align: center;
     text-decoration: none;
     color: var(--text-color);
-    flex-basis: 320px; /* Base width for each card */
+    flex-basis: 320px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plan-card:hover {
-    transform: translateY(-8px); /* Lifts the card on hover */
+    transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -178,44 +169,38 @@ body{
   transform: translateY(-5px);
 }
 
-/* section 2 css */
-
+/* section howitworks css */
 .how-it-works {
-    /* Sets the overall section style */
     text-align: center;
-    padding: 60px 24px; /* Vertical and horizontal spacing */
-    background-color: var(--secondary-background-color, #fcfaf3); /* A light background to separate it */
+    padding: 60px 24px;
+    background-color: var(--secondary-background-color, #fcfaf3);
 }
 
 .how-it-works h2 {
-    /* Styles the main heading */
     font-size: 32px;
     font-weight: 700;
     color: var(--text-color, #221f1a);
-    margin-bottom: 48px; /* Space below the heading */
+    margin-bottom: 48px;
 }
 
 .steps {
-    /* This is the container for the step cards */
     display: flex;
-    justify-content: space-around; /* Spreads the cards out evenly */
-    align-items: flex-start; /* Aligns cards to the top */
-    gap: 32px; /* Space between the cards */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 32px;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the whole group */
+    margin: 0 auto;
 }
 
 .step {
-    /* This styles each individual card */
     background-color: #ffffff;
     padding: 32px 24px;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* A soft shadow for depth */
-    flex-basis: 300px; /* Gives each card a base width */
-    flex-grow: 1; /* Allows cards to grow if there's space */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex-basis: 300px;
+    flex-grow: 1;
     max-width: 350px;
 
-    /* We use flexbox here too to center the content inside the card */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,43 +208,36 @@ body{
 }
 
 .step span {
-    /* This styles the number icon */
     font-size: 28px;
     background-color: var(--primary-color, #569dfa);
     color: white;
     height: 64px;
     width: 64px;
-    border-radius: 50%; /* Makes it a perfect circle */
+    border-radius: 50%;
 
-    /* Centering the emoji inside the circle */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .step p {
-    /* Styles the text below the icon */
     font-size: 18px;
     font-weight: 600;
     color: var(--text-color, #221f1a);
-    margin: 0; /* Removes default paragraph margin */
+    margin: 0;
 }
 
-/*  */
 @media (max-width: 768px) {
     .steps {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center the cards in the column */
+        flex-direction: column;
+        align-items: center;
     }
 
     .step {
-        width: 100%; /* Make cards take full width on mobile */
+        width: 100%;
         max-width: 400px;
     }
 }
-
-
-/*  */
 
 .container-home h1{
     font-size: 36px;

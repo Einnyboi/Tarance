@@ -1,3 +1,4 @@
+//home.js
 document.addEventListener('DOMContentLoaded', () => {
     // Get the current user's data from localStorage
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));

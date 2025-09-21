@@ -1,4 +1,4 @@
-// File: src/js/count-health.js
+//count-health.js
 
 document.getElementById('health-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -6,7 +6,7 @@ document.getElementById('health-form').addEventListener('submit', function(event
     // 1. Get all values from the form
     const fullName = document.getElementById('full-name').value;
     const dob = new Date(document.getElementById('dob').value);
-    const isSmoker = parseInt(document.getElementById('smoker').value); // 0 for No, 1 for Yes
+    const isSmoker = parseInt(document.getElementById('smoker').value);
     const hasHypertension = parseInt(document.getElementById('hypertension').value);
     const hasDiabetes = parseInt(document.getElementById('diabetes').value);
 
@@ -17,15 +17,15 @@ document.getElementById('health-form').addEventListener('submit', function(event
     // Calculate age
     const age = new Date().getFullYear() - dob.getFullYear();
     if (age >= 30 && age <= 50) {
-        riskFactor += 0.2; // 20% increase for ages 30-50
+        riskFactor += 0.2;
     } else if (age > 50) {
-        riskFactor += 0.5; // 50% increase for ages >50
+        riskFactor += 0.5;
     }
 
     // Add risk for health conditions
-    if (isSmoker) riskFactor += 0.3; // 30% increase for smokers
-    if (hasHypertension) riskFactor += 0.25; // 25% increase for hypertension
-    if (hasDiabetes) riskFactor += 0.25; // 25% increase for diabetes
+    if (isSmoker) riskFactor += 0.3;
+    if (hasHypertension) riskFactor += 0.25;
+    if (hasDiabetes) riskFactor += 0.25;
 
     const annualPremium = basePremium * riskFactor;
     const monthlyPremium = annualPremium / 12;

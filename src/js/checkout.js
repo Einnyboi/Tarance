@@ -1,4 +1,4 @@
-// File: src/js/checkout.js (Corrected)
+//checkout.js
 
 window.addEventListener('DOMContentLoaded', () => {
     // 1. Get the single data object from localStorage

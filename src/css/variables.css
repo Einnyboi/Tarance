@@ -43,7 +43,6 @@ html{
 .top-bar {
     display: flex;
     justify-content: space-between;
-    /* give space to the sides */
     align-items: center;
     padding: 0 96px;
     height: 60px;
@@ -77,10 +76,9 @@ html{
     cursor: pointer;
     padding: 8px 0;
 
-    /* Add these lines for alignment */
     display: flex;
     align-items: center;
-    gap: 6px; /* This adds a small space between the text and the icon */
+    gap: 6px;
 }
 
 .nav-dropdown-btn:hover {
@@ -96,14 +94,14 @@ html{
 }
 
 .nav-dropdown-content {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
     border-radius: 4px;
-    margin-top: 8px; /* Small space below the button */
+    margin-top: 8px;
 }
 
 .nav-dropdown-content a {
@@ -117,13 +115,10 @@ html{
     background-color: #ddd;
 }
 
-/* This class is added by JavaScript to show the menu */
 .nav-dropdown-content.show {
     display: block;
 }
 
-
-/* css for navbar's dropdown*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -200,11 +195,9 @@ a{
 
 
 /* css footer */
-
 footer {
     background-color: #2c3e50;
     color: #ecf0f1;
-    /* This applies 48px of padding to the TOP and BOTTOM */
     padding: 48px 0;
 }
 

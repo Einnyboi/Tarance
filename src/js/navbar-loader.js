@@ -1,3 +1,5 @@
+// navbar-loader.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbarPlaceholder = document.getElementById('navbar');
     if (!navbarPlaceholder) return;

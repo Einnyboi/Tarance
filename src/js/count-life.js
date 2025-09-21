@@ -1,42 +1,40 @@
-// File: src/js/count-life.js
+// count-life.js
 
 document.getElementById('life-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // 1. Get all values from the form
-    const fullName = document.getElementById('full-name').value;
+    // 1. Get values from the form
     const dob = new Date(document.getElementById('dob').value);
-    const sumInsured = parseFloat(document.getElementById('sum-insured').value);
+    const t = parseFloat(document.getElementById('sum-insured').value); // 't' = Besaran Pertanggungan
 
-    // 2. Life Premium Calculation Logic
-    const baseRate = 0.001; // Base rate is 0.1% of the sum insured
-    let ageMultiplier = 1.0;
+    // 2. Calculate age (u)
+    // This logic correctly accounts for the birth month and day.
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDifference = today.getMonth() - dob.getMonth();
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
 
-    // Calculate age
-    const age = new Date().getFullYear() - dob.getFullYear();
-    if (age >= 30 && age <= 45) {
-        ageMultiplier = 1.5;
-    } else if (age > 45) {
-        ageMultiplier = 2.5;
+    // 3. Determine the premium rate (m) based on the new criteria
+    let m = 0;
+    if (age <= 30) {
+        m = 0.002;
+    } else if (age <= 50) { 
+        m = 0.004; 
+    } else {
+        m = 0.01;
     }
     
-    const annualPremium = (sumInsured * baseRate) * ageMultiplier;
-    const monthlyPremium = annualPremium / 12;
+    // 4. Calculate the monthly premium using the correct formula: m * t
+    const monthlyPremium = m * t;
 
-    // 3. Save data to Local Storage in the correct format
-    const checkoutData = {
-        fullName: fullName,
-        productName: 'Asuransi Jiwa',
-        annualPremium: annualPremium,
-        monthlyPremium: monthlyPremium,
-        details: {
-            age: age,
-            sumInsured: sumInsured.toLocaleString('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 })
-        }
-    };
-    localStorage.setItem('insuranceCheckoutDetails', JSON.stringify(checkoutData));
+    // 5. Save the final price to localStorage for the checkout page
+    // Using 'premiumToPay' to be consistent with your other calculator pages.
+    localStorage.setItem('premiumToPay', monthlyPremium);
+    localStorage.setItem('productName', 'Asuransi Jiwa');
 
-    // 4. Display the result and the Checkout button
+    // 6. Display the result on the page
     const resultDiv = document.getElementById('result');
     const formattedPremium = monthlyPremium.toLocaleString('id-ID', {
         style: 'currency',
@@ -48,7 +46,7 @@ document.getElementById('life-form').addEventListener('submit', function(event) 
         <h3>Estimasi Premi Bulanan Anda:</h3>
         <h2 class="price">${formattedPremium}</h2>
         <p class="note">Premi dihitung berdasarkan usia dan jumlah pertanggungan yang dipilih.</p>
-        <a href="checkout.html" class="btn btn-primary" style="margin-top: 16px;">Go to Checkout</a>
+        <a href="checkout.html" class="btn-secondary" style="margin-top: 16px;">Checkout</a>
     `;
     resultDiv.style.display = 'block';
 });
