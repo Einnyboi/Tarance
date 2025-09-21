@@ -1,3 +1,7 @@
+# FRONT-END PROGRAMMING QUIZ 
+Name : Cathrine Sandrina
+NIM : 535240075
+
 # Tarumanagara Insurance - Web Application
 Welcome to the Tarumanagara Insurance web application, a modern, client-side website designed to provide users with information and tools for purchasing insurance policies. This project is built entirely with vanilla HTML, CSS, and JavaScript, focusing on dynamic user interfaces and local data persistence using the browser's Local Storage.
 
